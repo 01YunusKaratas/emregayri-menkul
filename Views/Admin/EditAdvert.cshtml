@@ -1,0 +1,106 @@
+﻿
+
+@model emregayrımenkul.Models.Advert
+
+ @{
+    Layout="_Layout2";
+} 
+
+
+<h2>İlan Güncelle</h2>
+
+
+    <form asp-controller="Admin" asp-action="EditAdvert" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <div class="mb-3">
+        <label>Güncel Resim:</label><br/>
+        <img src="@Model.UrlImage" style="width: 200px; height: auto;" alt="İlan Resmi" /><br/><br/>
+        <label>Yeni Resim Yükle (Opsiyonel)</label>
+        <input type="file" name="newImageFile" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label>İlan Başlığı</label>
+        <input type="text" name="AdvertTitle" value="@Model.AdvertTitle" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Açıklama</label>
+        <textarea name="Explain" class="form-control" required>@Model.Explain</textarea>
+    </div>
+
+    <div class="mb-3">
+        <label>Şehir</label>
+        <input type="text" name="City" value="@Model.City" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>İlçe</label>
+        <input type="text" name="District" value="@Model.District" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+        <label>Fiyat (₺)</label>
+        <input type="number" name="Cost" value="@Model.Cost" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label>Konut-Tipi</label>
+        <input type="text" name="Property" id="Property" value="@Model.Property"  class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Metre-Kare</label>
+        <input type="number" name="NetArea" id="NetArea" value="@Model.NetArea" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Oda-Sayısı</label>
+        <input type="text" name="RoomCount" id="RoomCount" value="@Model.RoomCount" class="form-control">
+
+    </div>
+    <div class="mb-3">
+        <label>Bina-Yaşı</label>
+        <input type="text" name="BuildingAge" id="BuildingAge" value="@Model.BuildingAge" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Kat-Bilgisi</label>
+        <input type="number" name="FloorNumber" id="FloorNumber" value="@Model.FloorNumber" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Toplam-Kat</label>
+        <input type="number" name="TotalFloors" id="TotalFloors" value="@Model.TotalFloors" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Isınma-Tipi</label>
+        <input type="text" name="heating" id="heating" value="@Model.heating" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label>Banyo-Sayısı</label>
+        <input type="number" name="BathroomCount" id="BathroomCount" value="@Model.BathroomCount" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Mutfak-Tipi</label>
+        <input type="text" name="Kitchen" id="Kitchen" value="@Model.Kitchen" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Balkon</label>
+        <input type="text" name="Balcony" id="Balcony" value="@Model.Balcony" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Asansör</label>
+        <input type="text" name="Elevator" id="Elevator" value="@Model.Elevator" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Park-Alanı</label>
+        <input type="text" name="Parking" id="Parking" value="@Model.Parking" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+    
+    <a class="btn btn-secondary" asp-controller="Admin" asp-action="Dashboard">İlan Sayfası</a>
+</form>
+
+
+
+
+
+

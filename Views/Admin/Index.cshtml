@@ -1,0 +1,33 @@
+﻿@{
+
+    Layout ="_Layout2";
+}
+<link rel="stylesheet" href="~/css/style.css">
+
+<body class="adminbody">
+        
+<section class="adminPage my-5 col-sm-12 text-dark">
+    <div class="container">
+        <h2 id="admintitle" class="display-4 my-2 fst-italic" style="font-weight: 600;">Yönetim Paneline Hoş Geldiniz!</h2>
+        <p id="admin_description my-3" class="fst-italic" style="font-weight: 500;">Buradan ilanları yönetebilir, kullanıcı bilgilerini güncelleyebilir ve sistem ayarlarını yapabilirsiniz.</p>
+        <p class="my-3" class="fst-italic" style="font-weight:500;">İlanlarla ilgili işlemleri yukarıdaki butonlardan yönetebilirsiniz. </p>
+        
+    </div>
+</section>
+
+<section class="tips mt-5 col-sm-12 text-dark">
+    <div class="container">
+        <h4 class="ms-3">Hızlı İpuçları:</h4>
+        <ul>
+            <li>İlan eklemek için <strong>'İlan Ekle'</strong> butonunu kullan.</li>
+            <li>Tüm ilanları görmek için <strong>'Tüm İlanlar'</strong> butonunu kullan.</li>
+            <li>Admin işlemleri için  <strong>'Diğer İşlemler'</strong> sekmesini kullan.</li>
+        </ul>
+        <div class="container text-dark">
+        <p>Toplam İlan: <strong>@ViewBag.Total</strong></p>
+    </div>
+    </div>
+</section>
+
+
+</body>

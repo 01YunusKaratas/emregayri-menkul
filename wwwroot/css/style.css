@@ -1,0 +1,500 @@
+.navbar {
+    max-height: 400px;
+}
+
+.nav-link {
+    font-size: 18px;
+    margin: 5px;
+}
+/*About page*/
+.about-banner {
+    background-image: url("/media/about3.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    z-index: -1;
+    background-color: #212529;
+}
+
+/*Alldetails banner*/
+.details-banner {
+    background-image: url("/media/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+    margin-top: 80px;
+    overflow-x: hidden;
+}
+
+
+.banner {
+    background-image: url("/media/sliders.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    z-index: -1;
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+}
+/*About banner*/
+.about-banner {
+    background-image: url("/media/about3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Sayfanın en az 60vh olması sağlanır */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    z-index: -1;
+    position: relative;
+    background-color: #212529;
+}
+
+/*Details page*/
+.details-text {
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    opacity: 1.2;
+}
+
+.details-title {
+    font-weight: 400 !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #212529 !important;
+}
+
+.details-2 {
+    color: #937a59;
+}
+
+    .details-2:hover {
+        color: white;
+    }
+
+
+
+/*index*/
+#banner-title {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.banner-text {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.card {
+    max-height: 500px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services {
+    min-height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: all ease 1s;
+    background-color: #AA8453;
+}
+
+    .services img {
+        object-fit: cover;
+    }
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+
+.choosed {
+    background-color: #AA8453;
+    background-image: url("/media/arkaplaniçin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 2;
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #AA8453 !important;
+}
+
+.content {
+    position: absolute;
+    width: 600px;
+    right: 25%;
+}
+
+.whyChoosed {
+    background-color: white;
+    min-height: 600px;
+}
+
+    .whyChoosed h3 {
+        text-decoration: none;
+    }
+
+        .whyChoosed h3:hover {
+            text-decoration: underline #3b2f1f;
+        }
+
+.why {
+    height: 225px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: rgb(98, 92, 68) 0px 20px 30px -10px !important;
+    background-color: #212529;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+    .why:hover {
+        background-color: #AA8453 !important;
+    }
+
+
+.footer {
+    background-color: #212529;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*About page*/
+
+.vision {
+    background-color: #212529;
+    padding: 0px;
+    margin: 0px;
+}
+
+.vision-text {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Hafif şeffaf kutu efekti */
+    border-radius: 10px;
+}
+
+.mission-text {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Hafif şeffaf kutu efekti */
+    border-radius: 10px;
+}
+
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.our-title {
+    font-weight: bolder !important;
+    font-size: xx-large;
+    opacity: 0.9;
+    color: #f0ba73 !important;
+}
+
+.our-description {
+    font-weight: 600 !important;
+    font-size: large;
+    opacity: 0.9;
+    color: #ffffff !important;
+    text-indent: 5px;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+/*Contact*/
+
+.maps {
+    background-color: white;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container {
+    width: 100%;
+    margin: 100px auto;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.info {
+       background-color:#212529;
+       
+}
+
+.infos {
+    padding: 20px;
+     /* Hafif şeffaf kutu efekti */
+    border-radius: 10px;
+}
+
+
+/*Alldetails*/
+
+#search-form {
+    border: 1px solid black;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+    #search-form input {
+        text-align: center;
+    }
+
+    #search-form button {
+        width: 100%;
+        background-color: #AA8453;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+        #search-form button:hover {
+            width: 100%;
+            background-color: #937a59;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+/*Login*/
+#login {
+    margin-top: 100px;
+    background-color: #212529;
+    opacity: 0.9;
+}
+
+.login-container {
+    padding: 25px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 40px;
+    width: auto;
+    min-height: 100px;
+    padding: 50px 0;
+}
+
+.container-login {
+    border: 1px solid black;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 30px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+    .container-login label:hover {
+        text-decoration: overline;
+    }
+
+    .container-login text:focus {
+        border: 2px solid black;
+        outline: none;
+    }
+
+    /*Dashboard*/
+    .content-dashboard{
+        
+        
+        background-color: whitesmoke;
+        font-size: 12px;
+    }
+    .table-responsive {
+        max-height: 600px !important; /* İstediğiniz yüksekliği belirleyin */
+        overflow-y: auto;  /* Dikey kaydırma çubuğu */
+        overflow-x: auto;  /* Yatay kaydırma çubuğu (gerektiğinde) */
+    }
+    select{
+        overflow-x: scroll;
+    }
+    
+    .dashboard-body{
+        background-color: #6e7071;
+    }
+
+    /*Admin Giriş Page*/
+    .adminPage {
+        margin-top:200px !important;
+        text-align: left;
+    }
+    #admintitle{
+       
+        text-align: center;
+
+    }
+    .tips{
+        
+        text-align: left;
+    }
+    .adminbody{
+        background-image: url('/media/8.jpg');
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 18px;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;      
+    }
+    .card-img-top-1{
+        width: 100%;
+        height: 400px;        
+        object-fit: cover;    
+        border-radius: 5px;   
+        aspect-ratio: 16/9;
+         
+    }
+    
+    .card-img-top{
+        width: 100%;
+        height: 200px;        
+        object-fit: cover;    
+        border-radius: 5px;   
+        aspect-ratio: 16/9;
+         
+    }
+    .card-text-detailss {
+        white-space: normal;   /* Metnin alt satıra geçmesini sağlar */
+        overflow-wrap: break-word;  /* Uzun kelimelerin alt satıra geçmesini sağlar */
+        word-wrap: break-word;     /* Ekstra uzun kelimeler için de aynı etkiyi sağlar */
+        max-width: 100%;           /* Alanın genişliğini sınırlamak */
+    }
+    
+    .card-title-detailss {
+        white-space: normal;  /* Metnin alt satıra geçmesini sağlar */
+        overflow-wrap: break-word;  /* Uzun kelimelerin alt satıra geçmesini sağlar */
+        word-wrap: break-word;     /* Ekstra uzun kelimeler için de aynı etkiyi sağlar */
+        max-width: 100%;           /* Alanın genişliğini sınırlamak */
+    }
+    /*LoginCard düzenleme*/
+    #loginCard,#RegisterCard{
+        background-color:#212529;
+        opacity: 0.8;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        text-align: left;
+        color: white;
+        min-height: 500px;
+    }
+    #loginCard:hover, #RegisterCard:hover{
+        transform:none;
+    }
+    
+   
+@media (max-width: 480px) {
+
+    .content {
+        position: absolute;
+        top: 45%;
+        width: 600px;
+        right: 3%;
+    }
+
+        .content p {
+            display: none
+        }
+
+    .vision-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .models {
+        display: none;
+    }
+
+    .details-text {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        opacity: 1.2;
+    }
+
+    .details-banner {
+        overflow-x: hidden;
+        color: black;
+    }
+
+    .details-banner .bölüm {
+            margin-top: 35rem;
+            color: black;
+        }
+
+    .map-container {
+        max-height: 60vh;
+    }
+
+    .infos {
+        flex-wrap: wrap;
+        
+    }
+
+    
+}

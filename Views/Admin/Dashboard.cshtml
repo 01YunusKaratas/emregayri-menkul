@@ -1,0 +1,90 @@
+﻿@model ICollection<emregayrımenkul.Models.Advert>;
+
+@{
+    Layout = "_Layout2";
+}
+
+
+<body class="dashboard-body">
+      <h1 class="display-5 my-5 text-white">Tüm-İlanlar</h1>
+    <div class="content-dashboard">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-container">
+                        <div class="table-responsive">
+                            <table class="table table-light" style="overflow-y: scroll;">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Başlık</th> 
+                                        <th>Şehir</th>
+                                        <th>İlçe</th>
+                                        <th>Resim</th>
+                                        <th>Fiyat</th>
+                                        <th>Konut-tipi</th>
+                                        <th>M2</th>
+                                        <th>OdaSayısı</th>
+                                        <th>BinaYaşı</th>
+                                        <th>Kat-Bilgisi</th>
+                                        <th>Toplam-Kat</th>
+                                        <th>Isınma-Tipi</th>
+                                        <th>Banyo-Sayısı</th>
+                                        <th>Mutfak-Tipi</th>
+                                        <th>Balkon</th>
+                                        <th>Asansör</th>
+                                        <th>Park-Alanı</th>
+                                        <th colspan="2" class="text-center">İşlemler</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="table-light">
+                                        @{
+                                            foreach(var item in Model){
+                                                <tr>
+                                                    <td>@item.Id</td>
+                                                    <td>@item.AdvertTitle</td>
+                                                    <td>@item.City</td>
+                                                    <td>@item.District</td>
+                                                    <td><img src="@item.UrlImage" alt="resimler" width="75px" height="75px"></td>
+                                                    <td>@item.Cost</td>
+                                                    <!--Buradan sonrası details-->
+                                                    <td>@item.Property</td>
+                                                    <td>@item.NetArea</td>
+                                                    <td>@item.RoomCount</td>
+                                                    <td>@item.BuildingAge</td>
+                                                    <td>@item.FloorNumber</td>
+                                                    <td>@item.TotalFloors</td>
+                                                    <td>@item.heating</td>
+                                                    <td>@item.BathroomCount</td>
+                                                    <td>@item.Kitchen</td>
+                                                    <td>@item.Balcony</td>
+                                                    <td>@item.Elevator</td>
+                                                    <td>@item.Parking</td>
+                                                    <td>
+                                                    <form asp-controller="Admin" asp-action="DeleteAdvert">
+                                                        <input type="hidden" name="Id" value="@item.Id">
+                                                        <button type="submit" class="btn btn-danger text-center" style="width: 75px;">Sil</button>
+                                                     </form>
+                                                    </td>
+                                                    <td>
+                                                        <form asp-controller="Admin" asp-action="EditAdvert" method="get">
+                                                            <input type="hidden" name="id" value="@item.Id" />
+                                                            <button type="submit" class="btn btn-primary text-center" style="width: 75px;">Güncelle</button>
+                                                        </form>
+                                                    </td>
+                                                    <br>
+                                                </tr>
+                                            }
+                                        }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+   

@@ -1,0 +1,107 @@
+﻿@model emregayrımenkul.Models.Advert;
+
+
+    
+    <section class="details-info my-3">
+    <div class="container-fluid mt-4" style="margin-top: 175px !important;">
+    <div class="row">
+        <!-- Sol Kısım: Görsel ve Genel Bilgiler -->
+        <div class="col-md-6">
+            <div class="cards shadow-sm img-fluid">
+                <img src="@Model.UrlImage" alt="card_img" class="card-img-top-1">
+            </div>
+            <div class=" mt-3">
+            <h5>Bizimle İletişime Geçin</h5>
+            <p>Her türlü soru, iş birliği ve talepleriniz için bizimle iletişime geçmekten çekinmeyin. Size en kısa sürede geri dönüş yapmaktan memnuniyet duyarız.</p>
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-outline-secondary btn-lg mt-2" style="text-decoration: none;">
+            👉 Bize Ulaşın
+            </a>
+
+           
+
+
+        </div>
+
+        </div>
+        <!-- Sağ Kısım: Detaylı Bilgiler -->
+        <div class="col-md-6">
+            <div class="cards shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title animate__animated animate__bounce">Detaylar</h5>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Şehir:</th>
+                                <td>@Model.City</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">İlçe:</th>
+                                <td>@Model.District</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><strong>Fiyat:</strong></th>
+                                <td>@Model.Cost ₺</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mülk Türü:</th>
+                                <td>@Model.Property</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Net Alan:</th>
+                                <td>@Model.NetArea</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Oda Sayısı:</th>
+                                <td>@Model.RoomCount</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bina Yaşı:</th>
+                                <td>@Model.BuildingAge</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Kat Sayısı:</th>
+                                <td>@Model.TotalFloors</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bulunduğu Kat:</th>
+                                <td>@Model.FloorNumber</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Isıtma:</th>
+                                <td>@Model.heating</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Banyo Sayısı:</th>
+                                <td>@Model.BathroomCount</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mutfak:</th>
+                                <td>@Model.Kitchen</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Balkon:</th>
+                                <td>@Model.Balcony</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Asansör:</th>
+                                <td>@Model.Elevator</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Park Alanı:</th>
+                                <td>@Model.Parking</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</section>
+<section>
+    <h1 class="">İlan-Açıklaması</h1>
+    <p class="m-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ipsa quaerat, hic quod deserunt porro debitis fugit? Soluta sunt corporis debitis quisquam, sequi aperiam? Qui officia blanditiis nulla ea esse excepturi est tempore nemo. Veniam nostrum non quo vero in debitis quod voluptatibus reprehenderit ipsa. Labore, laudantium. Molestias, sit iure et eligendi quibusdam similique, ea pariatur quaerat hic facilis iste! Ab voluptatum aliquam expedita deserunt cumque laborum numquam, temporibus enim ex facilis veniam est earum. Aliquam explicabo quo, impedit, iste animi officia laboriosam dolor illo sed nostrum doloremque voluptatum assumenda veritatis aut quam quasi suscipit earum recusandae tempore voluptatem aliquid!</p>
+</section>
+
+

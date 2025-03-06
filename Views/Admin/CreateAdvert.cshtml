@@ -1,0 +1,268 @@
+﻿@model emregayrımenkul.Models.Advert
+
+@{
+    Layout = "_Layout2";
+}
+
+<div class="container-fluid d-flex justify-content-center align-items-center flex-column" style="margin-top: 150px;">
+    <h2 class="my-2">İlan Ekle</h2>
+    <form method="post" asp-controller="Admin" asp-action="CreateAdvert" enctype="multipart/form-data">
+        <div class="container">
+            <div class="row d-flex justify-content-around align-items-center flex-row flex-wrap">
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group mb-3">
+                        <label for="imageFile" class="form-label"><strong>Resim-Ekle</strong></label>
+                        <input type="file" name="imageFile" id="imageFile" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group mb-3">
+                        <label for="AdvertTitle" class="form-label"><strong>İlan-Başlığı</strong></label>
+                        <input type="text" name="AdvertTitle" id="AdvertTitle" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                     <div class="form-group mb-3">
+                        <label for="Explain" class="form-label"><strong>Açıklama</strong></label>
+                        <input type="text" name="Explain" id="Explain" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4"> 
+                     <div class="form-group mb-3">
+                        <label for="City" class="form-label"><strong>Şehir</strong></label>
+                        <select name="City" id="City" class="form-control" required >
+                            <option value="" disabled selected>İl Seçiniz</option>
+                            <option value="Manisa">Manisa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                     <div class="form-group mb-3">
+                        <label for="District" class="form-label"><strong>İlçe</strong></label>
+                        <select name="District" id="District" class="form-control" required>
+                            <option value="" disabled selected>İlçe Seçiniz</option>
+                            <option value="Ahmetli">Ahmetli</option>
+                            <option value="Akhisar">Akhisar</option>
+                            <option value="Alaşehir">Alaşehir</option>
+                            <option value="Demirci">Demirci</option>
+                            <option value="Gölmarmara">Gölmarmara</option>
+                            <option value="Gördes">Gördes</option>
+                            <option value="Kırkağaç">Kırkağaç</option>
+                            <option value="Köprübaşı">Köprübaşı</option>
+                            <option value="Kula">Kula </option>
+                            <option value="Salihli">Salihli</option>
+                            <option value="Sarıgöl">Sarıgöl</option>
+                            <option value="Saruhanlı">Saruhanlı </option>
+                            <option value="Selendi">Selendi</option>
+                            <option value="Soma">Soma</option>
+                            <option value="Turgutlu">Turgutlu</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                     <div class="form-group mb-3">
+                        <label for="Cost" class="form-label"><strong>Fiyat</strong></label>
+                        <input type="number" name="Cost" id="Cost" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                      <div class="form-group mb-3">
+                        <label for="Property" class="form-label"><strong>Konut-Tipi</strong></label>
+                        <select name="Property" id="Property" class="form-control">
+                            <option value="" disabled selected>Konut Tipi Seçiniz</option>
+                            <option value="Ev">Ev</option>
+                            <option value="Ofis">Ofis</option>
+                            <option value="Apartman">Apartman</option>
+                            <option value="Villa">Villa</option>
+                            <option value="Tek-Kişilik-Oda">Tek Kişilik Oda</option>
+                            <option value="Müstakil-Ev">Müstakil Ev</option>
+                            <option value="Köy-Evi">Köy Evi</option>
+                            <option value="Dubleks">Dubleks</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                      <div class="form-group mb-3">
+                        <label for="NetArea" class="form-label"><strong>M2</strong></label>
+                        <input type="number" name="NetArea" id="NetArea" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                      <div class="form-group mb-3">
+                        <label for="RoomCount" class="form-label"><strong>Oda-Sayısı</strong></label>
+                        <select name="RoomCount" id="RoomCount" class="form-control">
+                            <option value="" disabled selected>Oda Tipi Seçiniz</option>
+                            <option value="1+0">1+0</option>
+                            <option value="2+0">2+0</option>
+                            <option value="1+1">1+1</option>
+                            <option value="2+1 ">2+1</option>
+                            <option value="3+1">3+1</option>
+                            <option value="4+1">4+1</option>
+                            <option value="5+1">5+1</option>
+                            <option value="6+1">6+1</option>
+                            <option value="3+2">3+2</option>
+                            <option value="4+2">4+2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                      <div class="form-group mb-3">
+                        <label for="BuildingAge" class="form-label"><strong>Bina-yaşı</strong></label>
+                        <input type="text" name="BuildingAge" id="BuildingAge" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                      <div class="form-group mb-3">
+                        <label for="FloorNumber" class="form-label"><strong>Kat-bilgisi</strong></label>
+                        <select name="FloorNumber" id="FloorNumber" class="form-control">
+                            <option value="" disabled selected>Kat Seçiniz</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                     <div class="form-group mb-3">
+                        <label for="TotalFloors" class="form-label"><strong>Toplam Kat Sayısı</strong></label>
+                         <select name="TotalFloors" id="TotalFloors" class="form-control">
+                            <option value="" disabled selected>Kat Bilgisi Seçiniz</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                     <div class="form-group mb-3">
+                        <label for="heating" class="form-label"><strong>Isınma-Tipi</strong></label>
+                        <select name="heating" id="heating" class="form-control">
+                            <option value="" disabled selected>Isınma Tipi Seçiniz</option>
+                            <option value="Doğalgaz">Doğalgaz</option>
+                            <option value="Elektrikli-Isıtma">Elektrikli Isıtma</option>
+                            <option value="Soba">Soba</option>
+                            <option value="Klima">Klima</option>
+                            <option value="Güneş-Enerjili-Isıtma">Güneş Enerjili Isıtma</option>
+                            <option value="Merkezi">Merkezi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                     <div class="form-group mb-3">
+                        <label for="BathroomCount" class="form-label"><strong>Yatak-Odası</strong></label>
+                        <select name="BathroomCount" id="BathroomCount" class="form-control">
+                            <option value="" disabled selected>Yatak Odası Sayısı</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group mb-3">
+                        <label for="Kitchen" class="form-label"><strong>Mutfak-Tipi</strong></label>
+                        <select name="Kitchen" id="Kitchen" class="form-control">
+                        <option value="" disabled selected>Mutfak Tipi Seçiniz</option>
+                        <option value="Açık Mutfak">Açık Mutfak</option>
+                        <option value="Kapalı-Mutfak">Kapalı Mutfak</option>
+                        <option value="Amerikan-Mutfak">Amerikan Mutfak</option>
+                        <option value="Ada-Mutfak">Ada Mutfak</option>
+                        <option value="Tek Duvar ">Tek Duvar Mutfak </option>
+                        <option value="Çift Duvar">Çift Duvar Mutfak</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                      <div class="form-group mb-3">
+                        <label for="Balcony" class="form-label"><strong>Balkon</strong></label>
+                        <select name="Balcony" id="Balcony" class="form-control">
+                            <option value="" disabled selected>Balkon Durumu</option>
+                            <option value="Var">Var</option>
+                            <option value="Yok">Yok</option>
+                        </select>
+                    </div>
+                </div>
+              
+                <div class="col-sm-12 col-md-4">
+                     <div class="form-group mb-3">
+                        <label for="Elevator" class="form-label"><strong>Asansör</strong></label>
+                        <select name="Elevator" id="Elevator" class="form-control">
+                            <option value="" disabled selected>Asansör Durumu</option>
+                            <option value="Var">Var</option>
+                            <option value="Yok">Yok</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group mb-3">
+                        <label for="Parking" class="form-label"><strong>Park-Alanı</strong></label>
+                        <select name="Parking" id="Parking" class="form-control">
+                            <option value="" disabled selected>Park Durumu</option>
+                            <option value="Var">Var</option>
+                            <option value="Yok">Yok</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                  <input type="submit" class="btn btn-success btn-sm">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+        
+       
+       
+       
+       
+      
+      
+      
+      
+      
+       
+       
+       
+        
+       
+       
+        @* <input type="text" name="City" id="City" class="form-control" required> *@

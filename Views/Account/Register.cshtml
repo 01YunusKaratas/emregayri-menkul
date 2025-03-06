@@ -1,0 +1,38 @@
+﻿@model emregayrımenkul.Models.ViewModels.RegisterVM
+
+@{
+    Layout="_Layout2";
+}
+<section class="" style="margin-top: 150px;">
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card col-md-3 p-3"  id="RegisterCard">
+    <form method="post" asp-controller="Account" asp-action="Register" class="my-5 ms-3 me-3">
+    <h2 class="text-center text-opacity-50">Admin-Kayıt</h2>
+    <div asp-validation-summary="ModelOnly"></div> <!--Burası hataları göstermek istiyor ve daha sonra ise döndürmek için -->
+    <div class="form-group mb-3">
+        <label asp-for="Name" class="form-label"><strong>Name</strong></label>
+        <input type="text" asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+     <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label"><strong>Email</strong></label>
+        <input type="email" asp-for="Email" class="form-control">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+     <div class="form-group mb-3">
+        <label asp-for="Password" class="form-label"><strong>Password</strong></label>
+        <input type="password" asp-for="Password" class="form-control">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="ConfirmPassword"><strong>ConfirmPassword</strong></label>
+        <input type="password" asp-for="ConfirmPassword" class="form-control"/>  
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <button type="submit" class="btn btn-sm btn-success">Kaydet</button>
+    </div>
+</form>
+</div>
+</div>
+</section>
