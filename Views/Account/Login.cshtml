@@ -4,9 +4,12 @@
     Layout = "_Layout3";
 }
 
-<section class="mx-1 d-flex align-items-center justify-content-center" style="margin-top: 150px;">
+<body id="login-body">
     
-<div class="col-md-3 card p-3  d-flex mx-auto" id="loginCard">
+    
+<section class="mx-1 d-flex align-items-center justify-content-center my-5">
+    
+<div class="col-md-3 card p-3  d-flex mx-auto align-items-center" id="loginCard">
     <form method="post" asp-controller="Account" asp-action="Login" class="my-5 ms-3 me-3">
     <h2 class="text-center text-opacity-50">Admin-Giriş</h2>
     <div asp-validation-summary="ModelOnly"></div> <!--Burası hataları göstermek istiyor ve daha sonra ise döndürmek için -->
@@ -24,7 +27,7 @@
     <div class="mb-1 form-check">
         <label class="form-check-label" >
             
-            <input asp-for="RememberMe" class="form-check-input">@Html.DisplayNameFor(y=>y.RememberMe)
+            <input asp-for="RememberMe" class="form-check-input" required>@Html.DisplayNameFor(y=>y.RememberMe)
 
         </label>
         
@@ -37,3 +40,4 @@
 </form>
 </div>
 </section>
+</body>

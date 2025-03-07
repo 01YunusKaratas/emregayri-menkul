@@ -4,7 +4,7 @@
     Layout = "_Layout2";
 }
 
-<div class="container-fluid d-flex justify-content-center align-items-center flex-column" style="margin-top: 150px;">
+<div class="container-fluid d-flex justify-content-center align-items-center flex-column my-5" style="margin-top: 150px;">
     <h2 class="my-2">İlan Ekle</h2>
     <form method="post" asp-controller="Admin" asp-action="CreateAdvert" enctype="multipart/form-data">
         <div class="container">
@@ -12,9 +12,10 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="form-group mb-3">
                         <label for="imageFile" class="form-label"><strong>Resim-Ekle</strong></label>
-                        <input type="file" name="imageFile" id="imageFile" class="form-control" accept="image/*">
+                        <input type="file" name="imageFile" id="imageFile" class="form-control" accept="image/* multiple">
                     </div>
                 </div>
+                
                 <div class="col-sm-12 col-md-4">
                     <div class="form-group mb-3">
                         <label for="AdvertTitle" class="form-label"><strong>İlan-Başlığı</strong></label>
@@ -30,7 +31,7 @@
                 <div class="col-sm-12 col-md-4"> 
                      <div class="form-group mb-3">
                         <label for="City" class="form-label"><strong>Şehir</strong></label>
-                        <select name="City" id="City" class="form-control" required >
+                        <select name="City" id="City" class="form-select" required >
                             <option value="" disabled selected>İl Seçiniz</option>
                             <option value="Manisa">Manisa</option>
                         </select>
@@ -39,7 +40,7 @@
                 <div class="col-sm-12 col-md-4">
                      <div class="form-group mb-3">
                         <label for="District" class="form-label"><strong>İlçe</strong></label>
-                        <select name="District" id="District" class="form-control" required>
+                        <select name="District" id="District" class="form-select" required>
                             <option value="" disabled selected>İlçe Seçiniz</option>
                             <option value="Ahmetli">Ahmetli</option>
                             <option value="Akhisar">Akhisar</option>
@@ -69,7 +70,7 @@
                 <div class="col-sm-12 col-md-4">
                       <div class="form-group mb-3">
                         <label for="Property" class="form-label"><strong>Konut-Tipi</strong></label>
-                        <select name="Property" id="Property" class="form-control">
+                        <select name="Property" id="Property" class="form-select">
                             <option value="" disabled selected>Konut Tipi Seçiniz</option>
                             <option value="Ev">Ev</option>
                             <option value="Ofis">Ofis</option>
@@ -85,13 +86,13 @@
                 <div class="col-sm-12 col-md-4">
                       <div class="form-group mb-3">
                         <label for="NetArea" class="form-label"><strong>M2</strong></label>
-                        <input type="number" name="NetArea" id="NetArea" class="form-control">
+                        <input type="number" name="NetArea" id="NetArea" class="form-select">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-4">
                       <div class="form-group mb-3">
                         <label for="RoomCount" class="form-label"><strong>Oda-Sayısı</strong></label>
-                        <select name="RoomCount" id="RoomCount" class="form-control">
+                        <select name="RoomCount" id="RoomCount" class="form-select">
                             <option value="" disabled selected>Oda Tipi Seçiniz</option>
                             <option value="1+0">1+0</option>
                             <option value="2+0">2+0</option>
@@ -115,7 +116,7 @@
                 <div class="col-sm-12 col-md-4">
                       <div class="form-group mb-3">
                         <label for="FloorNumber" class="form-label"><strong>Kat-bilgisi</strong></label>
-                        <select name="FloorNumber" id="FloorNumber" class="form-control">
+                        <select name="FloorNumber" id="FloorNumber" class="form-select">
                             <option value="" disabled selected>Kat Seçiniz</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -143,7 +144,7 @@
                 <div class="col-sm-12 col-md-4">
                      <div class="form-group mb-3">
                         <label for="TotalFloors" class="form-label"><strong>Toplam Kat Sayısı</strong></label>
-                         <select name="TotalFloors" id="TotalFloors" class="form-control">
+                         <select name="TotalFloors" id="TotalFloors" class="form-select">
                             <option value="" disabled selected>Kat Bilgisi Seçiniz</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -171,7 +172,7 @@
                 <div class="col-sm-12 col-md-4">
                      <div class="form-group mb-3">
                         <label for="heating" class="form-label"><strong>Isınma-Tipi</strong></label>
-                        <select name="heating" id="heating" class="form-control">
+                        <select name="heating" id="heating" class="form-select">
                             <option value="" disabled selected>Isınma Tipi Seçiniz</option>
                             <option value="Doğalgaz">Doğalgaz</option>
                             <option value="Elektrikli-Isıtma">Elektrikli Isıtma</option>
@@ -185,7 +186,7 @@
                 <div class="col-sm-12 col-md-4">
                      <div class="form-group mb-3">
                         <label for="BathroomCount" class="form-label"><strong>Yatak-Odası</strong></label>
-                        <select name="BathroomCount" id="BathroomCount" class="form-control">
+                        <select name="BathroomCount" id="BathroomCount" class="form-select">
                             <option value="" disabled selected>Yatak Odası Sayısı</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -198,7 +199,7 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="form-group mb-3">
                         <label for="Kitchen" class="form-label"><strong>Mutfak-Tipi</strong></label>
-                        <select name="Kitchen" id="Kitchen" class="form-control">
+                        <select name="Kitchen" id="Kitchen" class="form-select">
                         <option value="" disabled selected>Mutfak Tipi Seçiniz</option>
                         <option value="Açık Mutfak">Açık Mutfak</option>
                         <option value="Kapalı-Mutfak">Kapalı Mutfak</option>
@@ -212,7 +213,7 @@
                 <div class="col-sm-12 col-md-4">
                       <div class="form-group mb-3">
                         <label for="Balcony" class="form-label"><strong>Balkon</strong></label>
-                        <select name="Balcony" id="Balcony" class="form-control">
+                        <select name="Balcony" id="Balcony" class="form-select">
                             <option value="" disabled selected>Balkon Durumu</option>
                             <option value="Var">Var</option>
                             <option value="Yok">Yok</option>
@@ -223,7 +224,7 @@
                 <div class="col-sm-12 col-md-4">
                      <div class="form-group mb-3">
                         <label for="Elevator" class="form-label"><strong>Asansör</strong></label>
-                        <select name="Elevator" id="Elevator" class="form-control">
+                        <select name="Elevator" id="Elevator" class="form-select">
                             <option value="" disabled selected>Asansör Durumu</option>
                             <option value="Var">Var</option>
                             <option value="Yok">Yok</option>
@@ -233,7 +234,7 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="form-group mb-3">
                         <label for="Parking" class="form-label"><strong>Park-Alanı</strong></label>
-                        <select name="Parking" id="Parking" class="form-control">
+                        <select name="Parking" id="Parking" class="form-select">
                             <option value="" disabled selected>Park Durumu</option>
                             <option value="Var">Var</option>
                             <option value="Yok">Yok</option>
@@ -241,11 +242,13 @@
                     </div>
                 </div>
                 <div class="col-12">
-                  <input type="submit" class="btn btn-success btn-sm">
+                  <input type="submit" class="btn btn-success btn-sm" value="Kaydet" style="width: 75px;">
                 </div>
+                
             </div>
         </div>
     </form>
+   
 </div>
 
 

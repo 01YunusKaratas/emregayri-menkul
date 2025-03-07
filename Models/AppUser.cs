@@ -7,4 +7,6 @@ namespace emregayrımenkul.Models
     {
       
     }
+
+    
 }

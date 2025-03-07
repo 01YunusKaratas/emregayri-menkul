@@ -1,5 +1,4 @@
-﻿
-@model IEnumerable<emregayrımenkul.Models.Advert>
+﻿@model IEnumerable<emregayrımenkul.Models.Advert>
 
 
 <section class="details-banner">
@@ -7,11 +6,12 @@
         <div class="row m-1">
             <!-- Kartlar Bölümü -->
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-start bölüm">
-                <div class="container">
+                <div class="container" id="details-start">
                     <div class="row d-flex justify-content-center align-items-center g-3">
                         <div class="details-title col-12 text-dark">
-                            <p class="display-5"> Hayalinizdeki Evi Bulun</p>
-                            <p class="mt-2 text-left">Sizin için en uygun yaşam alanını bulun ve geleceğinizi güvenle şekillendirin.</p>
+                            <p class="display-5" style="font-family:'Times New Roman', Times, serif;font-style: italic;"> Hayalinizdeki Evi Bulun</p>
+                            <p class="mt-2 text-left" style="font-family:'Times New Roman', Times, serif;font-style: italic;font-weight: 600;">Sizin için en uygun yaşam alanını bulun ve geleceğinizi güvenle
+                                şekillendirin.</p>
 
                         </div>
                         <div class="col-12 col-sm-6 col-lg-4">
@@ -19,7 +19,6 @@
                             <div class="card h-100 info text-white text-center">
                                 <div class="card-body">
                                     <h5 class="card-title details-2">Konut Satışı</h5>
-
                                 </div>
                             </div>
                         </div>
@@ -39,48 +38,66 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <p class="mt-2 text-left details-title">Eviniz, ofisiniz veya yatırım yapacağınız arazi… Size en uygun seçeneği keşfedin ve hayatınıza değer katın. Şimdi en iyi fırsatları inceleyin!</p>
+                        <div class="col-12" id="sub-title">
+                            <p class="mt-2 text-left details-title" style="font-family:'Times New Roman', Times, serif;font-style: italic;font-weight: 600 !important;">Eviniz, ofisiniz veya yatırım yapacağınız arazi…
+                                Size en uygun seçeneği keşfedin ve hayatınıza değer katın. Şimdi en iyi fırsatları
+                                inceleyin!</p>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Arama Formu Bölümü -->
             <div class="col-12 col-md-6">
                 <div class="container p-3">
                     <div class="row d-flex justify-content-center align-items-center flex-column">
-                        <form id="search-form">
+                        <form id="search-form" method="get" asp-controller="Home" asp-action="AllDetails">
                             <h4 class="lead my-2 text-center" style="font-weight: 600;color:#735b3d">Hoşgeldiniz</h4>
                             <hr>
-
                             <div class="mb-3">
-                                <label class="form-label">Mülk Tipi</label>
-                                <select class="form-select">
-                                    <option>House</option>
-                                    <option>Office</option>
-                                    <option>Apartment</option>
-                                    <option>Condos</option>
-                                    <option>Villa</option>
-                                    <option>Small Family</option>
-                                    <option>Single Room</option>
+                                <label for="Property">Konut-Tipi</label>
+                                <select name="Property" id="Property" class="form-select">
+                                    <option value="" disabled selected>Konut Tipi Seçiniz</option>
+                                    <option value="Ev">Ev</option>
+                                    <option value="Ofis">Ofis</option>
+                                    <option value="Apartman">Apartman</option>
+                                    <option value="Villa">Villa</option>
+                                    <option value="Tek-Kişilik-Oda">Tek Kişilik Oda</option>
+                                    <option value="Müstakil-Ev">Müstakil Ev</option>
+                                    <option value="Köy-Evi">Köy Evi</option>
+                                    <option value="Dubleks">Dubleks</option>
                                 </select>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-group mb-3">
+                                    <label for="City" class="form-label">Şehir</label>
+                                    <select name="City" id="City" class="form-select" required>
+                                        <option value="" disabled selected>İl Seçiniz</option>
+                                        <option value="Manisa">Manisa</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Lokasyon Seç</label>
-                                <select class="form-select">
-                                    <option>İstanbul</option>
-                                    <option>Ankara</option>
-                                    <option>İzmir</option>
-                                    <option>Bursa</option>
-                                    <option>Antalya</option>
-                                </select>
-                            </div>
+                                <label for="District" class="form-label">İlçe</label>
+                                <select name="District" id="District" class="form-select" required>
+                                    <option value="" disabled selected>İlçe Seçiniz</option>
+                                    <option value="Ahmetli">Ahmetli</option>
+                                    <option value="Akhisar">Akhisar</option>
+                                    <option value="Alaşehir">Alaşehir</option>
+                                    <option value="Demirci">Demirci</option>
+                                    <option value="Gölmarmara">Gölmarmara</option>
+                                    <option value="Gördes">Gördes</option>
+                                    <option value="Kırkağaç">Kırkağaç</option>
+                                    <option value="Köprübaşı">Köprübaşı</option>
+                                    <option value="Kula">Kula </option>
+                                    <option value="Salihli">Salihli</option>
+                                    <option value="Sarıgöl">Sarıgöl</option>
+                                    <option value="Saruhanlı">Saruhanlı </option>
+                                    <option value="Selendi">Selendi</option>
+                                    <option value="Soma">Soma</option>
+                                    <option value="Turgutlu">Turgutlu</option>
 
-                            <div class="mb-3">
-                                <label class="form-label">Fiyat Aralığı</label>
-                                <input type="range" class="form-range" min="1000" max="999999" step="1000">
+                                </select>
                             </div>
 
                             <div class="d-grid">
@@ -99,31 +116,76 @@
 <section class="adverts my-5">
     <div class="container">
         <h3 class="text-center mb-4 fw-bolder">İlanlarımız</h3>
+        @if(!Model.Any()){
+            <div class="alert alert-danger text-dark" role="alert">
+
+                <h4>@ViewBag.message</h4>
+                 <p>Farklı arama kriterleri deneyebilir veya tüm ilanları görüntüleyebilirsiniz.</p>
+                <a asp-controller="Home" asp-action="AllDetails" class="btn text-center text-white btn-sm" style="background-color: #735b3d;
+                ">Tüm İlanlar</a>
+            </div>
+
+        }
         <div class="row row-cols-1 row-cols-md-3 g-4 m-1">
             @foreach (var item in Model)
             {
                 <div class="d-flex justify-content-center align-items-center">
-                    <div class="card shadow-sm h-100" style="width:350px;min-height: 450px;max-height: 700px;">
+                    <div class="card h-100" style="width:350px;min-height: 450px;max-height: 700px;" id="allcards">
                         <img src="@item.UrlImage" alt="card_img" class="card-img-top">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">@item.AdvertTitle</h5>
-                            <p class="card-text-details text-secondary">@item.Explain</p>
+                            @* <p class="card-text-details text-secondary">@item.Explain</p> *@
                             <ul class="list-unstyled">
                                 <li><strong>Şehir:</strong> @item.City</li>
                                 <li><strong>İlçe:</strong> @item.District</li>
-                                <li><strong>Fiyat:</strong> @item.Cost ₺</li>
+                                <li><strong>Fiyat:</strong> @String.Format("{0:N0}", item.Cost) ₺</li>
+
                             </ul>
-                            <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary mt-auto">Daha Fazla Bilgi</a>
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id"
+                                class="btn btn-primary mt-auto">Daha Fazla Bilgi</a>
                         </div>
                     </div>
                 </div>
             }
-        </div>
+        </div><br><br>
+        <!--Pegination-->
+        <nav aria-label="Page navigation my-5 text-center">
+    <ul class="pagination justify-content-center">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" 
+                   href="@Url.Action("AllDetails", new { page = ViewBag.CurrentPage - 1, property = ViewBag.Property, city = ViewBag.City, district = ViewBag.District })" 
+                   aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                <a class="page-link" 
+                   href="@Url.Action("AllDetails", new { page = i, property = ViewBag.Property, city = ViewBag.City, district = ViewBag.District })">
+                    @i
+                </a>
+            </li>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" 
+                   href="@Url.Action("AllDetails", new { page = ViewBag.CurrentPage + 1, property = ViewBag.Property, city = ViewBag.City, district = ViewBag.District })" 
+                   aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        }
+    </ul>
+</nav>
     </div>
 </section>
-
-
-
 
 <footer class="footer  text-white  pt-5 ">
     <div class="container">
@@ -162,6 +224,7 @@
                 </ul>
             </div>
         </div>
+
         <!-- Alt Kısım -->
         <hr class="border-1">
         <div class="row mt-5">

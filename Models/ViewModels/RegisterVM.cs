@@ -16,7 +16,7 @@ namespace emregayrımenkul.Models.ViewModels
         [DataType(DataType.Password)]
         public string? Password { get; set; }
 
-        [Compare("Password",ErrorMessage ="Şifre ile parola eşleşmiyor.")]
+        [Compare("Password",ErrorMessage ="Şifre  eşleşmiyor.")]
         [Required(ErrorMessage ="Lütfen şifreyi tekrar giriniz.")]
         public string? ConfirmPassword { get; set; }
 

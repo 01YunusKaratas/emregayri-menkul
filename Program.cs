@@ -21,7 +21,9 @@ builder.Services.AddScoped<IAdvertRepository, AdvertRepository>();//buradada ayn
 
 
 builder.Services.AddIdentity<AppUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders()
+    .AddErrorDescriber<CustomIdentityErrorDescriber>(); //hatayı buradan tanımladık
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Şifre politikalarını buraya ekleyebilirsiniz

@@ -13,6 +13,7 @@ namespace emregayrımenkul.Models.ViewModels
         [MaxLength(30)]
         [DataType(DataType.Password)]
         public string? Password { get; set; } // burada hatırlama işlemini gösteriyoruz.
+        [Required(ErrorMessage ="Robot değilim")]
         [Display(Name ="Beni Hatırla")]
         public bool RememberMe { get; set; }
 
